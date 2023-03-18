@@ -26,7 +26,7 @@ function PhaseSelector({ setSelectedPhasesUp }) {
   };
 
   async function fetchPhaseListFromBackend() {
-    const res = await fetch("http://localhost:3000/api/getPhases");
+    const res = await fetch("/api/getPhases");
 
     const data = await res.json();
     console.log(data.options);

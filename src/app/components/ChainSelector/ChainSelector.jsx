@@ -30,7 +30,7 @@ function ListAllChains({ setSelectedChainsUp }) {
   };
 
   async function fetchChainListFromBackend() {
-    const res = await fetch("http://localhost:3000/api/getNotionChainList");
+    const res = await fetch("/api/getNotionChainList");
     const data = await res.json();
     const res_array = [];
     setChainList([...data.options]);

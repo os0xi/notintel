@@ -34,16 +34,13 @@ export default function Home() {
     newAlphaEntry.twitterAddress = twitterAddress;
     newAlphaEntry.notes = notes;
     console.log(newAlphaEntry);
-    const res = await fetch(
-      "http://localhost:3000/api/AddNewAlphaEntryToNotion",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newAlphaEntry),
-      }
-    );
+    const res = await fetch("/api/AddNewAlphaEntryToNotion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newAlphaEntry),
+    });
     console.log(res);
   }
 

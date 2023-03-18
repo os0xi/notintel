@@ -26,7 +26,7 @@ function TagSelector({ setSelectedTagsUp }) {
   };
 
   async function fetchTagListFromBackend() {
-    const res = await fetch("http://localhost:3000/api/getNotionTagsList");
+    const res = await fetch("/api/getNotionTagsList");
 
     const data = await res.json();
     console.log(data.options);
