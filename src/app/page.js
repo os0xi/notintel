@@ -24,6 +24,13 @@ export default function Home() {
   const [twitterAddress, setTwitterAddress] = useState("");
   const [notes, setNotes] = useState("");
 
+  function openDatabase() {
+    window.open(
+      "https://scratched-canid-bec.notion.site/TestDB-c0765620651b4e2baa3720c3a9fb3d40",
+      "_blank"
+    );
+  }
+
   async function submitDataToNotion() {
     const newAlphaEntry = {};
     newAlphaEntry.name = name;
@@ -157,6 +164,14 @@ export default function Home() {
           onClick={submitDataToNotion}
         >
           Add to Notion
+        </Button>
+        <Button
+          variant="contained"
+          size="large"
+          color="warning"
+          onClick={openDatabase}
+        >
+          View Database
         </Button>
       </Box>
       {/* <Box sx={{ position: "fixed", right: 5, bottom: 5 }}>
