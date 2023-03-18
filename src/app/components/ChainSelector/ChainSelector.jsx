@@ -24,7 +24,7 @@ function ListAllChains({ setSelectedChainsUp }) {
     PaperProps: {
       style: {
         maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-        width: 250,
+        // width: 250,
       },
     },
   };
@@ -54,19 +54,43 @@ function ListAllChains({ setSelectedChainsUp }) {
   }, []);
 
   return (
-    <Box sx={{ display: "flex", flexWrap: "wrap", width: "30%" }}>
+    <Box sx={{ width: "100%", flex: 1, minWidth: 300 }}>
       {chainList && (
-        <Paper>
+        <Paper
+          sx={{
+            height: 80,
+            display: "flex",
+            alignItems: "center",
+            px: 1,
+            width: "100%",
+            flex: 1,
+          }}
+        >
           <FormControl>
-            <InputLabel variant="filled" id="chainSelector" color="secondary">
+            <InputLabel variant="filled" id="chainSelector" color="primary">
               Select chain(s)
             </InputLabel>
             <Select
+              MenuProps={MenuProps}
               labelId="chainSelector"
               multiple
-              sx={{ minWidth: 200, height: 80 }}
               value={selectedChains}
+              sx={{ minWidth: 300 }}
               onChange={handleChainSelectionChange}
+              renderValue={(selected) => (
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    mt: 1,
+                    maxWidth: "100%",
+                  }}
+                >
+                  {selected.map((value) => (
+                    <Typography key={value}>{` ${value}, `}</Typography>
+                  ))}
+                </Box>
+              )}
             >
               {chainList.map((chain) => (
                 <MenuItem
