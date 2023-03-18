@@ -11,6 +11,7 @@ import ProjectNameInput from "./components/GeneralInput/GeneralInput";
 import DateSelector from "./components/DateSelector/DateSelector";
 import PhaseSelector from "./components/PhaseSelector/PhaseSelector";
 import GeneralInput from "./components/GeneralInput/GeneralInput";
+import logo from "./resources/images/logo.png";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -77,6 +78,18 @@ export default function Home() {
         justifyContent: "center",
       }}
     >
+      <Box
+        sx={{
+          display: "flex",
+          gap: 3,
+          width: "100%",
+          px: 5,
+          justifyContent: "center",
+          pt: 2,
+        }}
+      >
+        <Image src={logo} width={200} height={200} />
+      </Box>
       <Box
         sx={{
           display: "flex",
