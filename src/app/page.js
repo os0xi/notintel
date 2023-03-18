@@ -163,7 +163,7 @@ export default function Home() {
           color="success"
           onClick={submitDataToNotion}
         >
-          Add to Notion
+          🧑🏼‍🌾 Save 🌱
         </Button>
         <Button
           variant="contained"
@@ -171,7 +171,7 @@ export default function Home() {
           color="warning"
           onClick={openDatabase}
         >
-          View Database
+          🌾 View 🌅
         </Button>
       </Box>
       {/* <Box sx={{ position: "fixed", right: 5, bottom: 5 }}>
