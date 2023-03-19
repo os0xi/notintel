@@ -46,7 +46,7 @@ function ListAllChains({ setSelectedChainsUp }) {
       typeof value === "string" ? value.split(",") : value
     );
     console.log("chains din component", selectedChains);
-    setSelectedChainsUp([...selectedChains]);
+    setSelectedChainsUp(typeof value === "string" ? value.split(",") : value);
   }
 
   useEffect(() => {

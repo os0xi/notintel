@@ -35,6 +35,7 @@ export default function Home() {
     const newAlphaEntry = {};
     newAlphaEntry.name = name;
     newAlphaEntry.selectedChains = selectedChains;
+    console.log("chains submitting:", selectedChains);
     newAlphaEntry.selectedTags = selectedTags;
     newAlphaEntry.selectedDate = selectedDate;
     newAlphaEntry.selectedPhases = selectedPhases;
